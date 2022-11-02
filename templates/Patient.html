@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Registration</h2>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="PatientID">PatientID:</label>
+                <input type="text" class="form-control" id="PatientID" placeholder="Enter PatientID" name="PatientID" required>
+            </div>
+            <div class="form-group">
+                <label for="Appointment_date">Appointmentdate:</label>
+                <input type="text" class="form-control" id="Appointmentdate" placeholder="Enter Appointment_date" name="Appointmentdate" required>
+            </div>
+            <div class="form-group">
+                <label for="FirstName">FirstName:</label>
+                <input type="text" class="form-control" id="FirstName" placeholder="Enter FirstName" name="FirstName" required>
+            </div>
+            <div class="form-group">
+                <label for="LastName">LastName:</label>
+                <input type="text" class="form-control" id="LastName" placeholder="Enter LastName" name="LastName" required>
+            </div>
+            <div class="form-group">
+                <label for="MobileNumber">MobileNumber:</label>
+                <input type="text" class="form-control" id="MobileNumber" placeholder="Enter MobileNumber" name="MobileNumber"required >
+            </div>
+            <div class="form-group">
+                <label for="city">city:</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" required >
+            </div>
+            <div class="form-group">
+                <label for="address">address:</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="state">state:</label>
+                <input type="text" class="form-control" id="state" placeholder="Enter state" name="state" required>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

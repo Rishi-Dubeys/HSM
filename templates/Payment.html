@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function validateForm() {
+            var x = document.forms["paymentForm"]["ReceptionNo"].value;
+            if (x == "") {
+                alert("ReceptionNo must be filled out");
+                return false;
+            }
+
+            var x = document.forms["paymentForm"]["PatientID"].value;
+            if (x == "") {
+                alert("PatientID must be filled out");
+                return false;
+            }
+
+            var x = document.forms["paymentForm"]["PaymentDate"].value;
+            if (x == "") {
+                alert("PaymentDate must be filled out");
+                return false;
+            }
+
+            var x = document.forms["paymentForm"]["PaymentWith"].value;
+            if (x == "") {
+                alert("PaymentWith must be filled out");
+                return false;
+            }
+
+            var x = document.forms["paymentForm"]["Amount"].value;
+            if (x == "") {
+                alert("Amount must be filled out");
+                return false;
+            }
+
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Payment Registration</h2>
+        <form action="/Paymentregister" method="post" >
+            <div class="form-group">
+                <label for="ReceptionNo">ReceptionNo:</label>
+                <input type="text" class="form-control" id="ReceptionNo" placeholder="Enter ReceptionNo" name="ReceptionNo" required>
+            </div>
+            <div class="form-group">
+                <label for="PatientID">PatientID:</label>
+                <input type="text" class="form-control" id="PatientID" placeholder="Enter PatientID" name="PatientID" required>
+            </div>
+            <div class="form-group">
+                <label for="PaymentDate">PaymentDate:</label>
+                <input type="text" class="form-control" id="PaymentDate" placeholder="Enter PaymentDate" name="PaymentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="PaymentWith">PaymentWith:</label>
+                <input type="text" class="form-control" id="PaymentWith" placeholder="Enter PaymentWith" name="PaymentWith" required>
+            </div>
+            <div class="form-group">
+                <label for="Amount">Amount:</label>
+                <input type="text" class="form-control" id="Amount" placeholder="Enter Amount" name="Amount" required>
+            </div>
+            <input type="submit"  onclick="validateForm()" class="btn btn-default" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
