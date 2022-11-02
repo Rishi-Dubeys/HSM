@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>patientmedicin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>patientmedicin</h2>
+        <form action="/patientmedicinreg" method="post">
+            <div class="form-group">
+                <label for="ID">ID:</label>
+                <input type="text" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+            </div>
+            <div class="form-group">
+                <label for="DoctorID">DoctorID:</label>
+                <input type="text" class="form-control" id="DoctorID" placeholder="Enter DoctorID" name="DoctorID" required>
+            </div>
+            <div class="form-group">
+                <label for="PatientID">PatientID:</label>
+                <input type="text" class="form-control" id="PatientID" placeholder="Enter PatientID" name="PatientID" required>
+            </div>
+            <div class="form-group">
+                <label for="MedicinDetail">MedicinDetail:</label>
+                <input type="text" class="form-control" id="MedicinDetail" placeholder="Enter MedicinDetail" name="MedicinDetail" required>
+            </div>
+            <div class="form-group">
+                <label for="NextVisit">NextVisit:</label>
+                <input type="text" class="form-control" id="NextVisit" placeholder="Enter NextVisit" name="NextVisit" required>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
