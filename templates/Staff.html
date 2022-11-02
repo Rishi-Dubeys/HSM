@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Staff Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Staff Registration</h2>
+        <form action="/Staff_registration" method="post">
+            <div class="form-group">
+                <label for="Staff_number">Staff_number:</label>
+                <input type="text" class="form-control" id="Staff_number" placeholder="Enter Staff_number" name="Staff_number" required>
+            </div>
+            <div class="form-group">
+                <label for="Staff_firstname">Staff_firstname:</label>
+                <input type="text" class="form-control" id="Staff_firstname" placeholder="Enter Staff_firstname" name="Staff_firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="Staff_lastname">Staff_lastname:</label>
+                <input type="text" class="form-control" id="Staff_lastname" placeholder="Enter Staff_lastname" name="Staff_lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="DOJ">DOJ:</label>
+                <input type="text" class="form-control" id="DOJ" placeholder="Enter DOJ" name="DOJ" required>
+
+            </div>
+            <div class="form-group">
+                <label for="Designation">Designation:</label>
+                <input type="text" class="form-control" id="Designation" placeholder="Enter Designation" name="Designation" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">mobile:</label>
+                <input type="text" class="form-control" id="mobile" placeholder="Enter mobile" name="mobile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <input type="text" class="form-control" id="Address" placeholder="Enter Address" name="Address" required>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
