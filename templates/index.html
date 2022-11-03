@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+   
+    <br />
+    <h2> <marquee> WELCOME TO HOSPITAL MANAGMENT SYSTEM</marquee></h2>
+    <img src="../static/img/hms.jpeg"  width="600" height="400" />
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <li><a href="{{ url_for('patientmedicin') }}">Medicine</a></li>
+        <h2>Getting started</h2>
+        <p>
+            This provides an overview of the key steps involved in setting up a hospital management system.
+
+            1. Define  requirements
+
+            The first step in setting up a hospital management system is to define  requirements. What features do  need the system to have? What data do  need to track? What processes do  need to automate?
+
+            2. Evaluate  options
+
+            Once  know what  need,  can start evaluating different software options. There are many different hospital management systems available, so  should be able to find one that meets  needs.
+
+            3. Install the software
+
+            Once 've selected a system, 'll need to install it and configure it to meet  specific needs. This can be a complex process, so it's important to have a good understanding of the system before  start.
+
+            4. Train  staff
+
+            'll also need to train  staff on how to use the new system. 
+        </p>
+        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>introduction</h2>
+        <p>
+            Hospital management system is a computer software system for managing a hospital's operation, finances, patients, and staff. It typically includes features such as patient registration, appointment scheduling, case management, billing, and human resources.
+            A hospital management system is a computer system that helps hospital administrators to manage various aspects of their hospital. The system can help to track patient appointments, hospital admissions, bed usage, pharmacy stocks, and laboratory results. It can also help to manage the hospital's finances, including billing and payments.
+        </p>
+        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>About Us</h2>
+        <p>
+            Hospital management system is a computer system used in healthcare institutions to manage patient information, appointments, treatment plans, medications, and billing. It can also be used to manage employee schedules, inventory, and purchasing.
+            Our company is a prominent name in the field of hospital management system. We offer an advanced and comprehensive solution for hospitals which helps them manage various aspects of their business such as patient admission, discharge, treatment, etc. We have a team of experienced and dedicated professionals who are committed to provide best-in-class services to our clients.
+
+
+
+        </p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+<!-- html code for lab  page with field ID,PatientID,DoctorID,Test,BillAmount,Billdate with validation using  python code for flask  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lab Test</h2>
+        <form action="/labreg" method="post">
+            <div class="form-group">
+                <label for="ID">ID:</label>
+                <input type="text" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+            </div>
+            <div class="form-group">
+                <label for="PatientID">PatientID:</label>
+                <input type="text" class="form-control" id="PatientID" placeholder="Enter PatientID" name="PatientID" required>
+            </div>
+            <div class="form-group">
+                <label for="DoctorID">DoctorID:</label>
+                <input type="text" class="form-control" id="DoctorID" placeholder="Enter DoctorID" name="DoctorID" required>
+            </div>
+            <div class="form-group">
+                <label for="Test">Test:</label>
+                <input type="text" class="form-control" id="Test" placeholder="Enter Test" name="Test" required>
+            </div>
+            <div class="form-group">
+                <label for="BillAmount">BillAmount:</label>
+                <input type="text" class="form-control" id="BillAmount" placeholder="Enter BillAmount" name="BillAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="Billdate">Billdate:</label>
+                <input type="text" class="form-control" id="Billdate" placeholder="Enter Billdate" name="Billdate" required>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
