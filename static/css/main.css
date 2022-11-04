@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: black;
+    height: 116px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: flex;
+    Direction of the items, can be row or column
+    flex-direction: column;
+} */
+
+
+
+
+#logo {
+    top: 0.4em;
+    left: 0.8em;
+    display: inline-flex;
+    position: absolute;
+}
+
+/* .body1 {
+    background-image: url("../images/solid.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 100px 0px 100px;
+    background-size: 100% ;
+    scroll-behavior: auto;
+} */
+
+.body1{
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: linear-gradient(rgba(4,9,3,0.7),rgba(4,9,3,0.7)),url("../images/solid.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* .body2 {
+    background-image: url("../images/1st.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 100px 0px 100px;
+    background-size: 100%;
+    scroll-behavior: auto;
+} */
+
+
+.container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.top-right {
+    position: absolute;
+    color: #89adb9;
+    text-align: right;
+    font-size: 90px;
+    font-weight: bold;
+    top: 400px;
+    right: 16px;
+  }
+
+  .top-left {
+    position: absolute;
+    color: #6a9bac;
+    text-align: left;
+    font-size: 90px;
+    font-weight: bold;
+    top: 525px;
+    left: 16px;
+  }
+
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(50, 145, 233);
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(1, 94, 216);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(96, 158, 238);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.links {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+}
+
+#cst_head {
+    text-align: center;
+}
+
+.form {
+  padding: 20px 0;
+  width: auto;
+  margin: auto;
+}
+.form label{
+    font-size: 20px !important;
+    margin-top: 10px;
+    
+}
+.form .text{
+    width: 100%;
+    padding: 5px 15px;
+    border: solid 2px #0051ff;
+    border-radius: 5px;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form .text1{
+    width: 100%;
+    padding: 5px 10px;
+    border: solid 1px #0a0a0a;
+    border-radius: 5px;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form .bt{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #0077ff;
+    color: aliceblue;
+    margin-top: 10px;
+}
+.searchform {
+    position: relative;
+    padding:30px 0;
+}
+
+.psearchform {
+    position: relative;
+    left: 300px;
+    top : 500px;
+    height: 787px;
+
+}
+
+.form1 {
+    padding: 100px 0;
+    width: auto;
+    margin: auto;
+  }
+  .form1 label{
+      font-size: 18px !important;
+      margin-top: 10px;
+      color: #2d268d;
+      font-weight: bold;
+      
+  }
+  .form1 .text1{
+    width: 100%;
+    padding: 5px 10px;
+    border: solid 2px #248df0;
+    border-radius: 5px;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: black;
+    height: 33px;
+    width: 80px;
+    color: rgb(255, 0, 0);
+}
+
+pre {
+    color: red;
+    font-weight: bold;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.status {
+    position: absolute;
+    top: 200px;
+    padding-left: 50px;
+}
+.status h1{
+    text-align: center;
+}
+
+.astatus {
+    position: absolute;
+    top: 200px;
+    padding-left: 120px;
+}
+.astatus h1{
+    text-align: center;
+}
+
+.stat {
+    position: absolute;
+    top: 200px;
+    padding-left: 600px;
+}
+.stat h1{
+    text-align: center;
+}
+
+/* delete customer css start*/
+
+.wrapper {
+    text-align: center;
+    margin-top: 219px;
+}
+
+.deletecust {
+    display: inline-block;
+    width: 500px;
+}
+
+.deletecustheading {
+    background-color: lightgray;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.deleteform {
+    display: inline-block;
+    padding-top: 40px;
+}
+
+.taga {
+    text-decoration: none;
+}
+
+.cancelbutton {
+    float: right;
+    margin-right: 20px;
+}
+
+.decor {
+    background-color: grey;
+    color: white;
+}
+
+.confirm {
+    text-decoration-color: white;
+}
+
+
+
+/*first page*/
+
+.text-row{
+    width: 80%;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.text-row h5{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.text-row h1 {
+    font-size: 65px;
+}
+.text-row h3{
+    font-size: 45px;
+    margin-top: 10px;
+}
+.text-col h5, .text-col h1, .text-col h3{
+    text-align: left;
+}
+.text-row h3 span{
+    font-size: 25px;
+    color: #1256d4;
+}
+.text-col  {
+    flex-basis: 44%;
+}
+.text-col img{
+    height: 600px;
+    border-radius: 10%;
+}
+
+/*delete customer css end*/
+/*-------- Services   ----------*/
+
+.services {
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.service-col{
+    flex-basis: 31%;
+    background: #f8eeee;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+} 
+.service-col p{
+    padding: 10px;
+}
+
+.service-col:hover{
+    background: #1256d4;
+    color: #fff;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.7);
+    transition: 0.5s ease;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/*-------- Services   ----------*/
+
+/* Contact us*/
+
+
+.location{
+    width:80%;
+    margin:auto;
+    padding:80px 0;
+    text-align: center;
+}
+
+iframe{
+    padding-top: 20px;
+    width:100%;
+}
+.contact{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display:flex;
+    align-items: center;
+    padding: 40px;
+}
+.contact-col div span{
+    text-align: left;
+}
+.contact-col div .fas{
+    font-size: 28px;
+    color: #1256d4;
+    margin: 10px;
+    margin-right: 15px;
+}
+.contact-col div p{
+    padding: 0;
+    color: #555;
+}
+.contact-col div h5{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #555;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.contact-col button{
+   float: left;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600px;
+}
+p{
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 22px;
+}
+.btn-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position:relative;
+    cursor:pointer;
+    margin-top: 20px;
+}
+.btn-btn:hover{
+    border: 1px solid #1256d4;
+    background: #1256d4;
+    transition: 1s;
+}
+.blue-btn{
+    border: 1px solid #1256d4;
+    background: transparent;
+    color: #1256d4;
+}
+.blue-btn:hover{
+    color: #fff;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/*footer css start*/
+
+.footer {
+    position: absolute;
+    left: 0px;
+    bottom: -196px;
+    width: 100%;
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.foot_word_edit {
+    color: rgb(229, 237, 241);
+    font-size: larger;
+}
+
+span {
+    display: block;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.lastfooter {
+    font-size: 17;
+    display: inline;
+}
+
+.footercontent1 {
+    flex-basis: 40%;
+    text-align: start;
+}
+
+.footercontent2 {
+    flex-basis: 20%;
+    text-align: start;
+}
+
+.footercontent3 {
+    flex-basis: 30%;
+    text-align: start;
+}
+
+.footcontentinfo {
+    text-align: start;
+    color: #a8d8eb;
+}
+
+.endfooter {
+    background-color: rgb(50, 145, 233);
+}
+
+
+/*footer css end*/
+
+
+/*login css start*/
+
+.loginwrapper {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.logindiv {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.logindecor {
+    margin-bottom: 20px;
+}
+
+.logincust {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+}
+
+.loginheading {
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.registerheading {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+}
+
+
+.regwrapper {
+    width:50%;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 20px 20px;
+}
+
+.messages {
+    text-align: center;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: red;
+    font-size: larger;
+}
+.button {
+    background-color: #008CBA;; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
