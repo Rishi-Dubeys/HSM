@@ -39,15 +39,15 @@ def patientscreen():
 
 
 
-@app.route('/billing')
-def billing():
-    """Renders the about page."""
-    return render_template(
-        'billing.html',
-        title='Payment',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
+# @app.route('/billing')
+# def billing():
+#     """Renders the about page."""
+#     return render_template(
+#         'billing.html',
+#         title='Payment',
+#         year=datetime.now().year,
+#         message='Your application description page.'
+#     )
 
 
 # @app.route('/Search')
@@ -80,17 +80,6 @@ def medicines():
         year=datetime.now().year,
         message='Your application description page.'
     )
-
-@app.route('/search_patient')
-def search_patient():
-    """Renders the about page."""
-    return render_template(
-        'search_patient.html',
-        title='SearchP',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
 
 
 # @app.route('/lab')
@@ -143,8 +132,8 @@ def search_patient():
 
 
 
-@app.route('/generatebill', methods=['GET', 'POST'])
-def generatebill():
+@app.route('/billing', methods=['GET', 'POST'])
+def billing():
     if request.method == 'POST':
         ReceptionNo = request.form['ReceptionNo']
         PatientID = request.form['PatientID']
@@ -160,8 +149,8 @@ def generatebill():
         #cur.execute("INSERT INTO Payment(ReceptionNo,PatientID,PaymentDate,PaymentWith,Amount) VALUES (%s, %s, %s, %s, %s)", (ReceptionNo,PatientID,PaymentDate,PaymentWith,Amount))
         #mysql.connection.commit()
       
-        return redirect(url_for('generatebill'))
-    return render_template('home.html')
+        return redirect(url_for('home'))
+    return render_template('billing.html')
 
 
 
@@ -203,24 +192,7 @@ def generatebill():
 #         return render_template('home.html')
 #     return render_template('home.html')
 
-@app.route('/create_patient', methods=['GET', 'POST'])
-def create_patient():
-    if request.method == 'POST':
-        ID = request.form['ID']
-        DoctorID = request.form['DoctorID']
-        PatientID = request.form['PatientID']
-        MedicinDetail = request.form['MedicinDetail']
-        NextVisit = request.form['NextVisit']
-        
-        sql="INSERT INTO patientmedicin(ID, DoctorID, PatientID, MedicinDetail, NextVisit) VALUES (%s, %s, %s, %s, %s)"
-        val=(ID, DoctorID, PatientID, MedicinDetail, NextVisit)
-        sqlcursor.execute(sql, val)
-        msqldb.commit()
 
-        return render_template('create_patient.html')
-    return render_template('home.html')
-
-    
 @app.route('/staff_registration', methods=['GET', 'POST'])
 def staff_registration():
     if request.method == 'POST':
@@ -230,14 +202,12 @@ def staff_registration():
         phone = request.form['phone']
         address = request.form['address']
         city = request.form['city']
-        state = request.form['state']
-        zip = request.form['zip']
         country = request.form['country']
         cursor = msqldb.cursor()
-        cursor.execute("INSERT INTO registration(username, password, email, phone, address, city, state, zip, country) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", (username, password, email, phone, address, city, state, zip, country))
+        cursor.execute("INSERT INTO registration(username, password, email, phone, address, city, country) VALUES (%s, %s, %s, %s, %s, %s, %s)", (username, password, email, phone, address, city, country))
         msqldb.commit()
         cursor.close()
-        return redirect(url_for('staff_registration'))
+        return redirect(url_for('home') )
     return render_template('staff_registration.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -257,25 +227,25 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/labreg', methods=['GET', 'POST'])
-def labreg():
-    if request.method == 'POST':
-        ID = request.form['ID']
-        PatientID = request.form['PatientID']
-        DoctorID = request.form['DoctorID']
-        Test = request.form['Test']
-        BillAmount = request.form['BillAmount']
-        Billdate = request.form['Billdate']
-        if ID and PatientID and DoctorID and Test and BillAmount and Billdate:
+# @app.route('/labreg', methods=['GET', 'POST'])
+# def labreg():
+#     if request.method == 'POST':
+#         ID = request.form['ID']
+#         PatientID = request.form['PatientID']
+#         DoctorID = request.form['DoctorID']
+#         Test = request.form['Test']
+#         BillAmount = request.form['BillAmount']
+#         Billdate = request.form['Billdate']
+#         if ID and PatientID and DoctorID and Test and BillAmount and Billdate:
              
-            sql="INSERT INTO lab(ID,PatientID,DoctorID,Test,BillAmount,Billdate) VALUES(%s, %s, %s, %s, %s, %s)"
-            val=(ID, PatientID, DoctorID, Test, BillAmount, Billdate)
-            sqlcursor.execute(sql, val)
-            msqldb.commit()
+#             sql="INSERT INTO lab(ID,PatientID,DoctorID,Test,BillAmount,Billdate) VALUES(%s, %s, %s, %s, %s, %s)"
+#             val=(ID, PatientID, DoctorID, Test, BillAmount, Billdate)
+#             sqlcursor.execute(sql, val)
+#             msqldb.commit()
             
-            return render_template('home.html')
-        else:
-            return 'Error while inserting'
+#             return render_template('home.html')
+#         else:
+#             return 'Error while inserting'
 
 
 # @app.route('/searchDoctor', methods=['POST', 'GET'])
@@ -296,13 +266,28 @@ def labreg():
 #         return render_template("searchDoctor.html", data=data)
 #     return render_template("searchDoctor.html")
 
-
-@app.route('/search_Patient', methods=['POST', 'GET'])
-def search_Patient():
+@app.route('/create_patient', methods=['GET', 'POST'])
+def create_patient():
     if request.method == 'POST':
         PatientID = request.form['PatientID']
+        AppoinmentDate = request.form['AppoinmentDate']
         FirstName = request.form['FirstName']
-        LastName = request.form['LastName']
+        lastName = request.form['lastName']
+        age = request.form['age']
+
+        sql="INSERT INTO patientmedicin(PatientID, AppoinmentDate, FirstName, lastName, age) VALUES (%s, %s, %s, %s, %s)"
+        val=(PatientID, AppoinmentDate, FirstName,lastName, age)
+        sqlcursor.execute(sql, val)
+        msqldb.commit()
+
+        return render_template('home.html')
+    return render_template('create_patient.html')
+
+
+@app.route('/search_patient', methods=['POST', 'GET'])
+def search_patient():
+    if request.method == 'POST':
+        PatientID = request.form['PatientID']
         msqldb = mysql.connector.connect(
           host="localhost",
           user="root",
@@ -311,7 +296,26 @@ def search_Patient():
         )
         sqlcursor = msqldb.cursor()
        
-        sql="SELECT * FROM patient WHERE PatientID = " + PatientID +  " or FirstName= '" + FirstName + "' or LastName= '" + LastName + "'"
+        sql="SELECT * FROM patient WHERE PatientID = " + PatientID +  "'"
         sqlcursor.execute(sql)
         data = sqlcursor.fetchall()
-        return render_template("search_patient.html", data=data)
+        return render_template("patientscreen.html", data=data)
+    return render_template("search_patient.html")
+
+# @app.route('/search_patient', methods=['GET', 'POST'])
+# def search_patient():
+#     if request.method == 'POST':
+#         PatientID = request.form['PatientID']
+#         cur = msqldb.cursor()
+        
+#         msql="SELECT * FROM customer WHERE PatientID like '%" + PatientID + "%'"
+#         cur.execute(msql)
+#         data = cur.fetchall()
+#         if data:
+#             #userDetails = cur.fetchall()
+#             return render_template('patientscreen.html', userDetails=data)
+#         else:
+#             msg = 'No Record Found'
+#             return render_template('search_patient.html', msg=msg)
+#         cur.close()
+#     return render_template('search_patient.html')
